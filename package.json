@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/VladimirTyalo/32147-gllacy#readme",
   "devDependencies": {
+    "browser-sync": "^2.12.1",
     "gulp": "^3.9.1"
   }
 }
