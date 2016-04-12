@@ -1,6 +1,6 @@
 body {
-  background-color: lightblue;
-  color: red;
+  background-color: antiquewhite;
+  color: grey;
 }
 
 div {
@@ -9,3 +9,15 @@ div {
   display: flex;
   box-shadow: 0 0 2px 2px green;
 }
+
+p {
+  width: 100%;
+  margin: auto;
+}
+
+a {
+  font-size: 40px;
+  text-decoration: none;
+}
+
+
