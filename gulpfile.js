@@ -5,13 +5,14 @@
   "use strict";
   var gulp = require('gulp');
   var browserSync = require('browser-sync').create();
-
+  var autoprefixer = require('gulp-autoprefixer');
 
   gulp.task('default', function () {
     console.log("Build Ok");
   });
 
-  gulp.task('watch', function(gulpCallback) {
+
+  gulp.task('watch', function (gulpCallback) {
     browserSync.init({
       // serve out of app/
       server: './',
@@ -22,7 +23,7 @@
       gulp.watch('index.html', browserSync.reload);
 
       // watch css and stream to BrowserSync when it changes
-      gulp.watch('css/**', function() {
+      gulp.watch('css/**', function () {
         // grab css files and send them into browserSync.stream
         // this injects the css into the page
         gulp.src('css/**')
@@ -32,6 +33,15 @@
       // notify gulp that this task is done
       gulpCallback();
     });
+  });
+
+  gulp.task('prefix', function () {
+    return gulp.src('css/style.css')
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
+      .pipe(gulp.dest('css'));
   });
 
 
