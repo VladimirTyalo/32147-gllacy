@@ -7,7 +7,7 @@
   var browserSync = require('browser-sync').create();
   var autoprefixer = require('gulp-autoprefixer');
 
-  gulp.task('default', function () {
+  gulp.task('default', ["watch"], function () {
     console.log("Build Ok");
   });
 

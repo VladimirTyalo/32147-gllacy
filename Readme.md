@@ -1,14 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Vladimir Tyalo](https://up.htmlacademy.ru/htmlcss/13/user/32147).
-* Наставник: `Неизвестно`.
-
----
-
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitignore`, `Contributing.md`, `Readme.md`._
-
----
+* Наставник: `Без наставника`.
 
 ### Памятка
 
