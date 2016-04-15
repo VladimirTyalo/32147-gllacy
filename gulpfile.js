@@ -37,7 +37,7 @@
   gulp.task('prefix', function () {
     return gulp.src('css/style.css')
       .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
+        browsers: ['> 2% in ru', "ie 9-11", "last 2 versions" ],
         cascade: false
       }))
       .pipe(gulp.dest('css'));
