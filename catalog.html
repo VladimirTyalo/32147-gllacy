@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Глейси</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="index">
+
+
+  <header class="header">
+    <div class="container">
+      <div class="header__logo"></div>
+      <nav class="header__nav">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a href="#">Каталог</a>
+            <ul class="header__sub-menu-list">
+              <li class="header__sub-menu-item"><a href="#">Новинки</a></li>
+              <li class="header__sub-menu-item"><a href="#">Сливочное</a></li>
+              <li class="header__sub-menu-item"><a href="#">Щербеты</a></li>
+              <li class="header__sub-menu-item"><a href="#">Фруктовый лёд</a></li>
+              <li class="header__sub-menu-item"><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
+          <li class="header__menu-item"><a href="#">Доставка и оплата</a></li>
+          <li class="header__menu-item"><a href="#">О Компании</a></li>
+        </ul>
+
+        <div class="user-block">
+          <label class="user-block__search-icon" for="search-controller">
+            <div class="user-block__search-modal">
+              <input class="user-block__search-field" type="text" placeholder="Что ищем?">
+            </div>
+          </label>
+          <input class="user-block__search-controller" id="search-controller" type="checkbox">
+          <div class="user-block__login">
+            <form action="" class="user-block__login-modal">
+              <input type="text" class="user-block__email-input" placeholder="Электронная почта">
+              <input type="text" class="user-block__password-input" placeholder="Пароль">
+              <button class="button button--user-block-modal">Войти</button>
+              <a href="" class="user-block__get-new-password">Забыли пароль</a>
+              <a href="" class="user-block__new-registration">Новая регистраия</a>
+            </form>
+          </div>
+          <div class="user-block__logout"></div>
+        </div>
+      </nav>
+
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог</a></li>
+        <li class="breadcrumbs__item"><span href="#" class="breadcrumbs__link">Сливочное</span></li>
+      </ul>
+      <div class="header__contacts">
+        <span class="header__contacts-time">С 10 до 20 ежедневно</span>
+        <a class="header__contacts-phone" href="tel:8812452525">
+          8 812 450-25-25
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="catalog">
+    <div class="container">
+      <h1 class="catalog__header">Сливочное мороженое</h1>
+
+      <form class="form" action="get">
+        <fieldset class="form__sort">
+          <legend class="form_legend">Сортировка:</legend>
+          <select class="form__options" size=1 name="form__options" id="">
+            <option value="" class="from__option">по популярности</option>
+            <option value="" class="from__option">сначала недорогие</option>
+            <option value="" class="from__option">сначала дорогие</option>
+            <option value="" class="from__option">по жирности</option>
+          </select>
+        </fieldset>
+        <fieldset class="form__sort">
+          <legend class="form_legend">Цена: 100 руб. - 500 руб.</legend>
+          <div class="form__sub-wrapper">
+            <!-- TODO -->
+          </div>
+        </fieldset>
+        <fieldset class="form__fats">
+          <legend class="form_legend">Жирность:</legend>
+          <div class="form__sub-wrapper">
+            <input class="form__radio" id="form__radio1" type="radio">
+            <label class="form__radio-label" for="form__radio1">0%</label>
+            <input class="form__radio" id="form__radio2" type="radio">
+            <label class="form__radio-label" for="form__radio2">до 10%</label>
+            <input class="form__radio" id="form__radio3" type="radio">
+            <label class="form__radio-label" for="form__radio3">до 30%</label>
+            <input class="form__radio" id="form__radio4" type="radio">
+            <label class="form__radio-label" for="form__radio4">выше 30%</label>
+          </div>
+
+        </fieldset>
+        <fieldset class="form__fillers">
+          <legend class="form_legend">Наполнители:</legend>
+          <div class="form__sub-wrapper">
+            <input class="form__checkbox" type="checkbox" id="form__checkbox1">
+            <lable for="form__checkbox1" class="form__label-text">шоколадные</lable>
+            <lable class="form__label-box" for="form__checkbox1"></lable>
+            <input class="form__checkbox" type="checkbox" id="form__checkbox2">
+            <lable for="form__checkbox2" class="form__label-text">сахарные присыпки</lable>
+            <lable class="form__label-box"></lable>
+            <input class="form__checkbox" type="checkbox" id="form__checkbox3">
+            <lable for="form__checkbox3" class="form__label-text">фрукты</lable>
+            <lable class="form__label-box"></lable>
+            <input class="form__checkbox" type="checkbox" id="form__checkbox4">
+            <lable for="" class="form__label-text">сиропы</lable>
+            <lable class="form__label-box"></lable>
+            <input class="form__checkbox" type="checkbox" id="form__checkbox5">
+            <lable for="" class="form__label-text">джемы</lable>
+            <lable class="form__label-box"></lable>
+          </div>
+        </fieldset>
+        <button class="form__submit">Применить</button>
+      </form>
+
+      <div class="posters-container">
+        <!-- 1 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-orange.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">310 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное с апельсиновым джемом и цитрусовой стружкой
+          </header>
+        </article>
+        <!-- 2 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-coffe.png" alt="ice cream"  width="267" height="267">
+          <span class="ice-cream-post__price">380 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочно-кофеное с кусочками шоколада
+          </header>
+        </article>
+        <!-- 3 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-strawb.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">355 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочно-клубничное с присыпкой из белого шоколада
+          </header>
+        </article>
+        <!-- 4 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-caramel.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">415 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное крем-брюле с карамельной подливкой
+          </header>
+        </article>
+        <!-- 5 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-cowberry.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">325 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное с брусничным джемом
+          </header>
+        </article>
+        <!-- 6 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-bilberry.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">410 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочно-черничное с цельными ягодами черники
+          </header>
+        </article>
+        <!-- 7 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-lemon.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">375 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочно-лимонное с карамельной присыпкой
+          </header>
+        </article>
+        <!-- 8 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-chockolate-vanila.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">320 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное с шоколадной стружкой
+          </header>
+        </article>
+        <!-- 9 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-milkandchockolate.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">440 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочно-ванильное с кусочками шоколада
+          </header>
+        </article>
+        <!-- 10 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-menthol.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">435 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное с ментоловым сиропом
+          </header>
+        </article>
+        <!-- 11 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-black-chockolate.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">355 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное с кусочками черного шоколада
+          </header>
+        </article>
+        <!-- 12 -->
+        <article class="ice-cream-post">
+          <img class="ice-cream-post__image" src="img/icecream-mint.png" alt="ice cream" width="267" height="267">
+          <span class="ice-cream-post__price">420 р/кг</span>
+          <header class="ice-сream-post__title">
+            Сливочное с мятным сиропом
+          </header>
+        </article>
+
+
+      </div>
+
+      <div class="pagination">
+        <ul class="pagination__list">
+          <li class="pagination__item"><a href="" class="pagination__link"></a></li>
+          <li class="pagination__item"><a href="" class="pagination__link">1</a></li>
+          <li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+          <li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+          <li class="pagination__item"><a href="" class="pagination__link">4</a></li>
+          <li class="pagination__item"><a href="" class="pagination__link">5</a></li>
+          <li class="pagination__item"><a href="" class="pagination__link"></a></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <!-- БЭМ блок -->
+      <ul class="socials">
+        <li class="socials__item"><a href="" class="socials__link socials__link--tw"></a></li>
+        <li class="socials__item"><a href="" class="socials__link--inst"></a></li>
+        <li class="socials__item"><a href="" class="socials__link--fb"></a></li>
+        <li class="socials__item"><a href="" class="socials__link--vk"></a></li>
+      </ul>
+    </div>
+
+    <ul class="footer__menu">
+      <li class="footer__menu-item">Для поставщиков</li>
+      <li class="footer__menu-item">Наши документы</li>
+      <li class="footer__menu-item">О производстве</li>
+      <li class="footer__menu-item">Экологические стандарты</li>
+    </ul>
+
+    <div class="footer__made-by">
+      <span class="footer__logo"></span>
+      <span class="footer__copyright">Сделано в HTML Academy</span></div>
+  </footer>
+
+
+  <form class="feedback-modal" action="get">
+    <h2 class="feedback-modal__title">Мы обязательно вам ответим!</h2>
+    <button class="feedback-modal__icon-close"></button>
+    <input type="text" class="feedback-modal__name" placeholder="Как вас зовут?">
+    <input type="text" class="feedback-modal__email" placeholder="Ваша почта для ответа?">
+    <input type="text" class="feedback-modal__text" placeholder="Напишите что нибудь...">
+    <button class="button button--feedback-submit">Отправить</button>
+  </form>
+
+
+</body>
+</html>

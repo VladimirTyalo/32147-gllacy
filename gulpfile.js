@@ -20,7 +20,7 @@
       // launch default browser as soon as server is up
       //open: true
     }, function callback() {
-      gulp.watch('index.html', browserSync.reload);
+      gulp.watch(['index.html', 'catalog.html'], browserSync.reload);
       // watch css and stream to BrowserSync when it changes
       gulp.watch('css/**', function () {
         // grab css files and send them into browserSync.stream
