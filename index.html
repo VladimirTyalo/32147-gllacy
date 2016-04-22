@@ -37,13 +37,15 @@
             <svg class="user-block__search-icon">
               <use x="0" y="0" xlink:href="#icon-search"></use>
             </svg>
+
+            <div class="user-block__search-modal">
+              <input class="user-block__search-field" type="text" placeholder="Что ищем?">
+            </div>
           </div>
-          <div class="user-block__search-modal">
-            <input class="user-block__search-field" type="text" placeholder="Что ищем?">
-          </div>
+
           <div class="user-block__login">
             <a class="user-block__login-link" href="#">
-              Вход
+              <span class="user-block__login-text">Вход</span>
               <svg class="user-block__icon-login">
                 <use x="0" y="0" xlink:href="#icon-login"></use>
               </svg>
@@ -53,12 +55,15 @@
               <input class="user-block__email-input" type="text" placeholder="Электронная почта">
               <input class="user-block__password-input" type="text" placeholder="Пароль">
               <button class="button button--user-block-modal">Войти</button>
-              <a href="" class="user-block__get-new-password">Забыли пароль</a>
-              <a href="" class="user-block__new-registration">Новая регистраия</a>
+              <div class="user-block__special-cases">
+                <a href="" class="user-block__get-new-password">Забыли пароль?</a>
+                <a href="" class="user-block__new-registration">Новая регистрация</a>
+              </div>
             </form>
           </div>
-          <div class="user-block__basket">
-            <a class="user-block__basket-link" href="#">Пусто
+          <div class="user-block__basket user-block__basket--nonempty">
+            <a class="user-block__basket-link" href="#">
+              <span class="user-block__basket-text">Пусто</span>
               <svg class="user-block__icon-basket">
                 <use x="0" y="0" xlink:href="#icon-cart"></use>
               </svg>
@@ -80,31 +85,31 @@
   <div class="slider">
 
 
-    <input class="slider__controls" id="slider__controls1" type="radio" name="slider__radio">
+    <input class="slider__controls" id="slider__controls1" type="radio" name="slider__radio" checked>
     <input class="slider__controls" id="slider__controls2" type="radio" name="slider__radio">
     <input class="slider__controls" id="slider__controls3" type="radio" name="slider__radio">
-    <label class="slider__control-labels" for="slider__controls1"></label>
+    <label class="slider__control-labels " for="slider__controls1"></label>
     <label class="slider__control-labels" for="slider__controls2"></label>
     <label class="slider__control-labels" for="slider__controls3"></label>
 
     <div class="slider__inner">
-      <div class="slider__slides ">
+      <div class="slider__slides">
         <h1 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h1>
         <img class="slider__img" src="img/ic-1-double.png" alt="ice cream" width="647" height="584">
         <a href="" class="button button--slider">Давайте оба!</a>
       </div>
 
-      <div class="slider__slides hidden">
+      <div class="slider__slides">
         <h1 class="slider__title">Шоколадный пломбир и лимонный сорбет</h1>
         <img class="slider__img" src="img/ic-2-double.png" alt="ice cream" width="644" height="582">
-        <a href="" class="button button--slider">Давай оба!</a>
+        <a href="" class="button button--slider">Давайте оба!</a>
 
       </div>
 
-      <div class="slider__slides hidden">
+      <div class="slider__slides">
         <h1 class="slider__title">Пломбир с помадкой и клубничный щербет</h1>
         <img class="slider__img" src="img/ic-3-double.png" alt="ice cream" width="639" height="582">
-        <a href="" class="button button--slider">Давай оба!</a>
+        <a href="" class="button button--slider">Давайте оба!</a>
       </div>
 
     </div>
@@ -119,7 +124,7 @@
         <div class="banner banner--raspberry">
           <h2 class="banner__title">Малинка даром!</h2>
           <p class="banner__text">
-            При покупке 2 кг любоко фруктового мороженого, доюавим в ваш заказ юанку
+            При покупке 2 кг любоко фруктового мороженого, добавим в ваш заказ юанку
             малинового варенья бесплатно.
           </p>
           <a href="" class="button button--banner">Хочу варенье!</a>
@@ -254,11 +259,11 @@
           <div class="news-subscr__wrapper">
             <p class="news-subscr__text">
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
-              что у нас происходит.Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
+              что у нас происходит.Обещаем не спамить и не слать всякой не нужной ерунды. Честно -)
             </p>
-            <form action="" class="news-subscr__form">
+            <form action="#" class="news-subscr__form">
               <input type="text" class="news-subscr__input" placeholder="Электронная почта">
-              <button class="news-subscr__button">Отправить</button>
+              <button class="button button--news-subscr">Отправить</button>
             </form>
           </div>
         </article>
@@ -269,16 +274,18 @@
   </main>
 
   <div class="map">
-    <!-- БЭМ блок -->
-    <div class="map-feedback">
-      <div class="map-feedback__contacts">
-        Адрес клавного офиса и офлайн магазина:<br>
-        <b> ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
-        Для заказов по телефону:<br>
-        <a href="tel:88124502525">8 812 450-25-25</a><br>
-        (с 10 до 20 ежедневно)
+    <div class="container">
+      <!-- БЭМ блок -->
+      <div class="map-feedback">
+        <div class="map-feedback__contacts">
+          Адрес клавного офиса и <br>офлайн магазина:<br>
+          <b> ул. Большая Конюшенная 19/8, Санкт-Петербург</b><br>
+          Для заказов по телефону:<br>
+          <a href="tel:88124502525">8 812 450-25-25</a><br>
+          (с 10 до 20 ежедневно)
+        </div>
+        <a href="" class="button button--feedback-form">Форма обратной связи</a>
       </div>
-      <a href="" class="button button__feedback-form">Форма обратной связи</a>
     </div>
   </div>
 
@@ -342,13 +349,13 @@
   </footer>
 
 
-  <form class="feedback-modal" action="get">
+  <form class="feedback-modal hidden" action="get">
     <h2 class="feedback-modal__title">Мы обязательно вам ответим!</h2>
     <button class="feedback-modal__icon-close"></button>
     <input type="text" class="feedback-modal__name" placeholder="Как вас зовут?">
     <input type="text" class="feedback-modal__email" placeholder="Ваша почта для ответа?">
-    <input type="text" class="feedback-modal__text" placeholder="Напишите что нибудь...">
-    <button class="button button--feedback-submit">Отправить</button>
+    <textarea class="feedback-modal__text" rows=6 placeholder="Напишите что нибудь..."></textarea>
+    <button type="button" class="button button--feedback-submit">Отправить</button>
   </form>
 
 
