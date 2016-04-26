@@ -9,7 +9,6 @@
   var svgmin = require('gulp-svgmin');
   var svgstore = require("gulp-svgstore");
   var path = require("path");
-  var inject = require('gulp-inject');
   var htmlhint = require("gulp-htmlhint");
 
 
@@ -52,6 +51,7 @@
                .pipe(gulp.dest('css'));
   });
 
+
   gulp.task('svgmin', function () {
     return gulp.src('./img/icons/*.svg')
                .pipe(svgmin(function getOptions(file) {
@@ -76,7 +76,7 @@
   });
 
 
-  const BROWSER_OPTIONS = ['> 2% in ru', "ie 9-11", "last 2 versions"];
+  const BROWSER_OPTIONS = [ "ie 10"];
   const SVGMIN_PLAGINS = [{
     removeDoctype: true
   }, {
