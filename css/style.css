@@ -35,19 +35,19 @@ input[type="text"]:focus {
   border: 2px solid #8fbdec;
 }
 
-.index {
+.index-color1 {
   background: #849d8f; /* fallback */
   background: #849d8f radial-gradient(circle at 50% 385px, #cdf4df 0, #849d8f 497px);
 }
 
-.index--color2 {
+.index-color2 {
   background: #549aaf; /* fallback */
   background: #549aaf radial-gradient(circle at 50% 385px, #c4dbf4 0, #549aaf 497px);
 }
 
-.index--color3 {
+.index-color3 {
   background: #e3a6c7; /* fallback */
-  background:  #e3a6c7 radial-gradient(circle at 50% 385px, #f2ebff 0,  #e3a6c7 497px);
+  background: #e3a6c7 radial-gradient(circle at 50% 385px, #f2ebff 0, #e3a6c7 497px);
 }
 
 .catalog {
@@ -56,7 +56,7 @@ input[type="text"]:focus {
 
 a {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -68,8 +68,6 @@ a:hover {
   position: relative;
   display: flex;
   padding: 0 2.25%;
-  /*border-right: 2px solid white;*/
-  /*border-left: 2px solid white;*/
 }
 
 .header,
@@ -1087,7 +1085,7 @@ a:hover {
 }
 
 .button:active {
-  color: green;
+  color: white;
   background: linear-gradient(#d84732, #e1613e);
   box-shadow: 0 -2px 2px 0 #ab5948;
 }
@@ -1212,18 +1210,6 @@ a:hover {
   flex-flow: column nowrap;
 }
 
-.ice-cream-post__button {
-  visibility: hidden;
-  width: 100%;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 20px;
-  margin-top: auto;
-  margin-bottom: 10px;
-}
-
 .ice-cream-post:hover {
   background: #9db1a5;
 }
@@ -1234,6 +1220,18 @@ a:hover {
 
 .ice-cream-post:nth-of-type(4n) {
   margin-right: 0;
+}
+
+.ice-cream-post__button {
+  visibility: hidden;
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .ice-cream-post__image {
