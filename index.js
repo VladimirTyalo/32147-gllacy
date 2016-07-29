@@ -20,10 +20,10 @@
   app.set('view engine', 'html');
 
   app.set("views", [
-      path.join(__dirname, "build"),
-      path.join(__dirname, "img"),
-      path.join(__dirname, "js"),
-      path.join(__dirname, "fonts"),
+      path.join(__dirname, "/build"),
+      path.join(__dirname, "/img"),
+      path.join(__dirname, "/js"),
+      path.join(__dirname, "/fonts"),
       path.join(__dirname, "/")
     ]
   );
