@@ -44,5 +44,9 @@
     "postcss-vmin": "^2.0.0",
     "postcss-will-change": "^1.1.0",
     "svgmin": "^0.1.0"
+  },
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0"
   }
 }
