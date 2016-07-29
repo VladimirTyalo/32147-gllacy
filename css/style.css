@@ -22,11 +22,10 @@ body {
 
 input[type="text"] {
   border: 2px solid #d3d3d2;
-  color: #000;
+  color: #000000;
   font-size: 16px;
   line-height: 24px;
 }
-
 
 input[type="text"]:hover {
   border: 2px solid #c7c6c5;
@@ -41,19 +40,29 @@ input[type="text"]:focus {
   background: #849d8f radial-gradient(circle at 50% 385px, #cdf4df 0, #849d8f 497px);
 }
 
+.index--color2 {
+  background: #549aaf; /* fallback */
+  background: #549aaf radial-gradient(circle at 50% 385px, #c4dbf4 0, #549aaf 497px);
+}
+
+.index--color3 {
+  background: #e3a6c7; /* fallback */
+  background:  #e3a6c7 radial-gradient(circle at 50% 385px, #f2ebff 0,  #e3a6c7 497px);
+}
+
 .catalog {
   background: #849d8f;
 }
 
 a {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:hover {
   color: #e84d37;
 }
-
-
 
 .container {
   position: relative;
@@ -425,7 +434,6 @@ a:hover {
   background: #f8f7f4;
 }
 
-
 .user-block__basket-content {
   position: absolute;
   display: none;
@@ -442,11 +450,9 @@ a:hover {
   background-clip: padding-box;
 }
 
-
 .user-block__basket:hover .user-block__basket-content {
   display: block;
 }
-
 
 .user-block__basket-list {
   list-style: none;
@@ -470,7 +476,6 @@ a:hover {
 .user-block__basket-record--orange {
   background-image: url("../img/icecream-orange.png");
 }
-
 
 .user-block__basket-record--coffe {
   background-image: url("../img/icecream-coffe.png");
@@ -685,7 +690,7 @@ a:hover {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: #ffffff;
   top: -8px;
   border-radius: 50%;
   z-index: 10;
@@ -697,8 +702,7 @@ a:hover {
   height: 4px;
   top: 0px;
   left: 30px;
-  background: #fff;
-
+  background: #ffffff;
 }
 
 .form__right-bound {
@@ -745,12 +749,12 @@ a:hover {
   height: 21px;
   margin-right: 10px;
   margin-left: 0px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 50%;
 }
 
 .form__radio-icon:hover {
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
 }
 
 .form__radio-label {
@@ -828,18 +832,14 @@ a:hover {
   background-position: -2px -1px;
 }
 
-
 .form__checkbox-icon:hover {
-  border: 2px solid #fff;
-
+  border: 2px solid #ffffff;
 }
-
 
 .form__checkbox:checked + .form__checkbox-icon:hover:before {
   background-size: 20px 20px;
   background-position: -3px -3px;
 }
-
 
 .form__label-text {
   margin-right: 21px;
@@ -871,13 +871,12 @@ a:hover {
 }
 
 .form .button--form-submit:hover {
-  color: #000;
+  color: #000000;
   background: #fbfcfb;
 }
 
-
 .form .button--form-submit:active {
-  color: #000;
+  color: #000000;
   background: #eaeaea;
 }
 
@@ -912,13 +911,13 @@ a:hover {
 }
 
 .pagination__link--active {
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
 }
 
 .pagination__link:hover {
   background: #9db1a5;
-  color: #fff;
+  color: #ffffff;
 }
 
 .pagination__icon-next,
@@ -966,8 +965,9 @@ a:hover {
 .slider__control-labels:hover {
   background: #b2c1b7;
 }
+
 .slider__control-labels:active {
-  background: #fff;
+  background: #ffffff;
 }
 
 .slider__control-labels:nth-of-type(1) {
@@ -1172,9 +1172,9 @@ a:hover {
 }
 
 .button--feedback-form {
+  text-align: center;
   padding: 11px 10px 11px 10px;
   display: block;
-  /*white-space: nowrap;*/
 }
 
 .button--basket {
@@ -1212,8 +1212,6 @@ a:hover {
   flex-flow: column nowrap;
 }
 
-
-
 .ice-cream-post__button {
   visibility: hidden;
   width: 100%;
@@ -1230,8 +1228,7 @@ a:hover {
   background: #9db1a5;
 }
 
-
-.ice-cream-post:hover  .ice-cream-post__button {
+.ice-cream-post:hover .ice-cream-post__button {
   visibility: visible;
 }
 
@@ -1415,7 +1412,6 @@ a:hover {
   background: url('./../img/bg-map.jpg') no-repeat;
   background-size: cover;
   max-width: 1200px;
-
 }
 
 .map .container {
@@ -1514,7 +1510,7 @@ a:hover {
 
 .footer__icon-heart {
   position: absolute;
-  top: -2px;
+  top: 0px;
   left: -20px;
   width: 13px;
   height: 13px;

@@ -12,7 +12,6 @@
   var postcss = require("gulp-postcss");
   var rename = require("gulp-rename");
   var sourcemaps = require('gulp-sourcemaps');
-  var plumber = require("gulp-plumber");
 
 
   var autoprefixer = require('autoprefixer');
@@ -58,12 +57,13 @@
         // grab css files and send them into browserSync.stream
         // this injects the css into the page
         gulp.src('css/**/*.css')
-            .pipe(sourcemaps.init())
             .pipe(postcss(PROCESSORS))
+            .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest("build/"))
             .pipe(nano())
             .pipe(rename("style.min.css"))
-            .pipe(gulp.dest("build/"))
+            //.pipe(sourcemaps.write('.'))
+            .pipe(gulp.dest('build/'))
             .pipe(browserSync.stream());
       });
 
@@ -74,10 +74,10 @@
 
   gulp.task('css', function () {
 
-    return gulp.src("css/**/*.css")
-               .pipe(sourcemaps.init())
+    return gulp.src('css/**/*.css')
                .pipe(postcss(PROCESSORS))
-               .pipe(gulp.dest("build/"))
+               .pipe(sourcemaps.write('.'))
+               .pipe(gulp.dest('build/'))
                .pipe(nano())
                .pipe(rename("style.min.css"))
                .pipe(gulp.dest("build/"));
