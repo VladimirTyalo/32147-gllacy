@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "build": "./gulp.sh build",
+    "start": "npm run build && ./gulp.sh serve"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,5 @@
     "del": "^2.2.1",
     "ejs": "^2.5.1",
     "express": "^4.14.0"
-  },
-  "start": "npm run build && gulp serve"
+  }
 }
