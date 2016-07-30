@@ -46,7 +46,7 @@
   ];
 
 
-  gulp.task('default', ["build", "serve"], function () {
+  gulp.task('default', ["serve"], function () {
     console.log("Build Ok");
   });
 
@@ -79,13 +79,13 @@
                .pipe(nano())
                .pipe(rename("style.min.css"))
                .pipe(gulp.dest("build/css"))
-               .pipe(browserSync.reload({stream: true}));
+               .pipe(browserSync.stream());
   });
 
 
   gulp.task("copy", function () {
     return gulp.src([
-                 "fonts/**/*.{woff,woff2}",
+                 "fonts/**/*.{woff,woff2,ttf}",
                  "img/**",
                  "js/**",
                  "*.html"
