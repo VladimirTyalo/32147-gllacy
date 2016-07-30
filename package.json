@@ -4,7 +4,9 @@
   "description": "gllacy ice-cream shop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-htmlhint": "^0.3.1",
+    "gulp-imagemin": "^3.0.2",
     "gulp-inject": "^4.0.0",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-plumber": "^1.1.0",
@@ -43,10 +46,13 @@
     "postcss-pseudoelements": "^3.0.0",
     "postcss-vmin": "^2.0.0",
     "postcss-will-change": "^1.1.0",
+    "run-sequence": "^1.2.2",
     "svgmin": "^0.1.0"
   },
   "dependencies": {
+    "del": "^2.2.1",
     "ejs": "^2.5.1",
     "express": "^4.14.0"
-  }
+  },
+  "start": "npm run build && gulp serve"
 }
