@@ -46,7 +46,7 @@
   ];
 
 
-  gulp.task('default', ["watch"], function () {
+  gulp.task('default', ["build", "serve"], function () {
     console.log("Build Ok");
   });
 
