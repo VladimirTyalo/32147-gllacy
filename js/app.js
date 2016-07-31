@@ -1,5 +1,8 @@
 (function () {
-  "use strict"
+  "use strict";
+
+  var blurArea = document.querySelector(".blur-area");
+
 
   var sliderLabel1 = document.getElementById("slider__label1");
   var sliderLabel2 = document.getElementById("slider__label2");
@@ -9,13 +12,19 @@
   var sliderControl2 = document.getElementById("slider__controls2");
   var sliderControl3 = document.getElementById("slider__controls3");
 
+  var feedbackModal = document.querySelector(".feedback-modal");
+  var feedbackWrapper = document.querySelector(".feedback-modal-wrapper");
+  var btnFeedback = document.querySelector(".button--feedback-form");
+  var btnFeedbackSubmit = document.querySelector(".button--feedback-submit");
+  var btnFeedbackClose = document.querySelector(".feedback-modal__icon-close");
+
   var BODY_BG_1 = "#9db1a5";
   var BODY_BG_2 = "#508EA3";
-  var BODY_BG_3 = "#D199B5";
+  var BODY_BG_3 = "#D4C1B8";
 
   var USER_BLOCK_BG_1 = "#A7C2B4";
   var USER_BLOCK_BG_2 = "#66B7C6";
-  var USER_BLOCK_BG_3 = "#EEC8DB";
+  var USER_BLOCK_BG_3 = "#D4C1B8";
 
 
   var login = document.getElementsByClassName("user-block__login")[0];
@@ -27,6 +36,8 @@
   var body = document.body;
 
   addListeners();
+
+  handleFeedbackModal();
 
   function changeBackground(element, color) {
     element.style.background = color;
@@ -59,6 +70,30 @@
       });
     }
   }
+
+  function addFeedbackButtonListener() {
+    btnFeedback.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      toggleModal();
+
+    });
+  }
+
+  function toggleModal() {
+    feedbackModal.classList.toggle("hidden");
+    feedbackModal.classList.toggle("bounce");
+    feedbackWrapper.classList.toggle("hidden");
+    blurArea.classList.toggle("blur");
+
+  }
+
+  function addModalCloseListener() {
+    btnFeedbackClose.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      toggleModal();
+    });
+  }
+
 
   function addListeners() {
 
@@ -102,5 +137,23 @@
     });
   }
 
+  function handleFeedbackModal() {
+    addFeedbackButtonListener();
+    addModalCloseListener();
+
+    feedbackWrapper.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      toggleModal();
+    });
+
+    window.addEventListener("keydown", function (ev) {
+      if (ev.keyCode === 27) {
+        if(!feedbackModal.classList.contains("hidden")){
+          toggleModal();
+        }
+      }
+    });
+
+  }
 
 })();

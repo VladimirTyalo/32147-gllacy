@@ -67,6 +67,13 @@
           .pipe(gulp.dest("build"))
           .pipe(browserSync.reload({stream: true}));
     });
+
+    gulp.watch("js/**/*.js").on("change", function (file) {
+      // copy js file to build folder
+      gulp.src(file.path)
+          .pipe(gulp.dest("build/js"))
+          .pipe(browserSync.reload({stream: true}));
+    });
   });
 
   gulp.task('css', function () {
@@ -115,7 +122,7 @@
       "clean",
       "copy",
       "css",
-      // "images",  // uncomment this line if images are big
+      //"images",  // uncomment this line if images are big
       fn
     );
   });
