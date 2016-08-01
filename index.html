@@ -417,13 +417,13 @@
     </div>
     <div class="feedback-modal-wrapper hidden">
     </div>
-    <form class="feedback-modal hidden" action="get">
+    <form class="feedback-modal hidden" action="#" method="POST">
       <h2 class="feedback-modal__title">Мы обязательно вам ответим!</h2>
       <button class="feedback-modal__icon-close"></button>
-      <input type="text" class="feedback-modal__name" placeholder="Как вас зовут?">
-      <input type="text" class="feedback-modal__email" placeholder="Ваша почта для ответа?">
-      <textarea class="feedback-modal__text" rows="6" placeholder="Напишите что нибудь..."></textarea>
-      <button type="button" class="button button--feedback-submit">Отправить</button>
+      <input type="text" class="feedback-modal__name" placeholder="Как вас зовут?" required name="name">
+      <input type="email" class="feedback-modal__email" placeholder="Ваша почта для ответа?" required name="email">
+      <textarea class="feedback-modal__text" rows="6" placeholder="Напишите что нибудь..." required name="text"></textarea>
+      <button type="submit"  class="button button--feedback-submit">Отправить</button>
     </form>
 
 

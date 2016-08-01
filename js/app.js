@@ -18,6 +18,12 @@
   var btnFeedbackSubmit = document.querySelector(".button--feedback-submit");
   var btnFeedbackClose = document.querySelector(".feedback-modal__icon-close");
 
+  var form = document.querySelector(".feedback-modal");
+  var inputName = document.querySelector(".feedback-modal__name");
+  var inputEmail = document.querySelector(".feedback-modal__email");
+  var inputText = document.querySelector(".feedback-modal__text");
+
+
   var BODY_BG_1 = "#9db1a5";
   var BODY_BG_2 = "#508EA3";
   var BODY_BG_3 = "#D4C1B8";
@@ -35,9 +41,10 @@
   var posts = document.getElementsByClassName("ice-cream-post");
   var body = document.body;
 
-  addListeners();
 
+  addListeners();
   handleFeedbackModal();
+
 
   function changeBackground(element, color) {
     element.style.background = color;
@@ -50,6 +57,7 @@
   }
 
   function addPostsListenters(elements, color) {
+    if (elements.length <= 0 || !elements) return;
     var baseColor = elements[0].style.background;
     // add listeners on mouseover
     for (var i = 0; i < elements.length; i++) {
@@ -96,15 +104,16 @@
 
 
   function addListeners() {
-
+    if (!sliderControl1 || !sliderControl2 || !sliderControl3) return;
     sliderLabel1.addEventListener("click", function (ev) {
       ev.preventDefault();
+      body.classList.add("index-color1");
       body.classList.remove("index-color3");
       body.classList.remove("index-color2");
-      body.classList.add("index-color1");
-      sliderControl1.checked = true;
       sliderControl2.checked = false;
       sliderControl3.checked = false;
+      sliderControl1.checked = true;
+
       changeAllElementsBackgrond(userBlock, USER_BLOCK_BG_1);
 
       addPostsListenters(posts, BODY_BG_1);
@@ -148,12 +157,63 @@
 
     window.addEventListener("keydown", function (ev) {
       if (ev.keyCode === 27) {
-        if(!feedbackModal.classList.contains("hidden")){
+        if (!feedbackModal.classList.contains("hidden")) {
           toggleModal();
         }
       }
     });
 
+    btnFeedbackSubmit.addEventListener("click", function(ev) {
+      ev.preventDefault();
+      var name = inputName.value;
+      var email = inputEmail.value;
+      var text = inputText.value;
+      var invalidEmail = document.querySelector(".feedback-modal__email:invalid");
+
+      form.classList.remove("bounce");
+
+      if(!name) {
+          inputName.classList.add("invalid");
+      }
+
+      if(!email || invalidEmail) {
+          inputEmail.classList.add("invalid");
+      }
+
+      if(!text) {
+         inputText.classList.add("invalid");
+      }
+
+      if(name && email && text && !invalidEmail) {
+        inputName.classList.remove("invalid");
+        inputEmail.classList.remove("invalid");
+        inputText.classList.remove("invalid");
+        form.classList.remove("shake");
+        form.submit();
+      }
+      else {
+        form.classList.add("shake");
+        body.offsetHeight;
+      }
+
+    });
+
+    addInputListener("change", inputName);
+    addInputListener("change", inputEmail);
+    addInputListener("change", inputText);
+
   }
+
+
+
+
+  function addInputListener(event, input) {
+    input.addEventListener(event, function(ev) {
+      ev.preventDefault();
+      form.classList.remove("shake");
+      input.classList.remove("invalid");
+    })
+  }
+
 
 })();
