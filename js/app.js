@@ -163,7 +163,7 @@
       }
     });
 
-    btnFeedbackSubmit.addEventListener("click", function(ev) {
+    btnFeedbackSubmit.addEventListener("click", function (ev) {
       ev.preventDefault();
       var name = inputName.value;
       var email = inputEmail.value;
@@ -172,19 +172,19 @@
 
       form.classList.remove("bounce");
 
-      if(!name) {
-          inputName.classList.add("invalid");
+      if (!name) {
+        inputName.classList.add("invalid");
       }
 
-      if(!email || invalidEmail) {
-          inputEmail.classList.add("invalid");
+      if (!email || invalidEmail) {
+        inputEmail.classList.add("invalid");
       }
 
-      if(!text) {
-         inputText.classList.add("invalid");
+      if (!text) {
+        inputText.classList.add("invalid");
       }
 
-      if(name && email && text && !invalidEmail) {
+      if (name && email && text && !invalidEmail) {
         inputName.classList.remove("invalid");
         inputEmail.classList.remove("invalid");
         inputText.classList.remove("invalid");
@@ -193,7 +193,9 @@
       }
       else {
         form.classList.add("shake");
-        body.offsetHeight;
+        setTimeout(function() {
+          form.classList.remove("shake");
+        }, 1000);
       }
 
     });
@@ -205,10 +207,8 @@
   }
 
 
-
-
   function addInputListener(event, input) {
-    input.addEventListener(event, function(ev) {
+    input.addEventListener(event, function (ev) {
       ev.preventDefault();
       form.classList.remove("shake");
       input.classList.remove("invalid");
