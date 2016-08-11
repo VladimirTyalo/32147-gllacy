@@ -646,6 +646,7 @@ a:hover {
 .header__contacts-phone {
   margin-top: 4px;
   text-decoration: none;
+  display: inline-block;
   font-family: "Roboto Black", "Roboto", Helvetica, Arial, sans-serif;
   font-size: calc(1rem * 22 / 16);
   line-height: calc(1rem * 24 / 16);
@@ -695,6 +696,7 @@ a:hover {
 }
 
 .form__price-range {
+  cursor: pointer;
   width: 190px;
   height: 4px;
   margin: 16px 15px;
@@ -712,23 +714,32 @@ a:hover {
   top: -8px;
   border-radius: 50%;
   z-index: 10;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .form__bound {
+  cursor: pointer;
   position: absolute;
-  width: 130px;
   height: 4px;
   top: 0px;
   left: 30px;
+  right: 30px;
   background: #ffffff;
 }
 
 .form__right-bound {
-  right: 10px;
+  left: 160px;
 }
 
 .form__left-bound {
   left: 10px;
+}
+
+.form__left-bound:active,
+.form__right-bound:active {
+  cursor: grab;
+  box-shadow: none;
+  top: -7px;
 }
 
 .form__option--sort-type {

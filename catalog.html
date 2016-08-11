@@ -148,14 +148,19 @@
               <option class="from__options-item" value="fatness">по жирности</option>
             </select>
           </fieldset>
-          <fieldset class="form__option form__option--price-range">
-            <legend class="form__legend">Цена: 100 руб. - 500 руб.</legend>
+          <fieldset class="form__option form__option--price-range" id="form__price-range">
+            <legend class="form__legend">Цена:
+              <span class="form__min-price">100</span>
+              руб. -
+              <span class="form__max-price">500</span>
+              руб.
+            </legend>
             <div class="form__sub-wrapper">
               <!-- TODO -->
-              <div class="form__price-range">
-                <div class="form__left-bound"></div>
-                <div class="form__bound"></div>
-                <div class="form__right-bound"></div>
+              <div class="form__price-range" id="price-range">
+                <div class="form__left-bound" id="form__left-bound"></div>
+                <div class="form__bound" id="form__bound"></div>
+                <div class="form__right-bound" id="form__right-bound"></div>
               </div>
             </div>
           </fieldset>
@@ -614,6 +619,6 @@
       </symbol>
 
     </svg>
-
+    <script src="js/price-range-controller.js"></script>
   </body>
 </html>
