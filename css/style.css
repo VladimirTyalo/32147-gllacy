@@ -1343,6 +1343,7 @@ a:hover {
   background: #ece0c7;
   background-image: url('./../img/bg-waffles.jpg');
   background-position: left -20px top 0;
+  background-size: 120% 100%;
   flex: 1 1 100%;
   flex-wrap: wrap;
 }
