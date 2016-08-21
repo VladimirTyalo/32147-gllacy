@@ -79,6 +79,7 @@
     if (ev.clientX > leftBound && ev.clientX < rightBound) {
       elem.style.left = ev.clientX - corner.left - 1.2 * elem.offsetWidth + "px";
     }
+
     fillBound();
     setPriceLabels();
   }

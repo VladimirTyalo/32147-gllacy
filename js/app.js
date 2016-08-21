@@ -69,7 +69,6 @@
     }
 
     // removerlisteners on mouseout
-
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
       element.addEventListener("mouseout", function (ev) {
@@ -83,7 +82,6 @@
     btnFeedback.addEventListener("click", function (ev) {
       ev.preventDefault();
       toggleModal();
-
     });
   }
 
@@ -92,7 +90,13 @@
     feedbackModal.classList.toggle("bounce");
     feedbackWrapper.classList.toggle("hidden");
     blurArea.classList.toggle("blur");
+  }
 
+  function closeModal() {
+    feedbackModal.classList.add("hidden");
+    feedbackModal.classList.remove("bounce");
+    feedbackWrapper.classList.add("hidden");
+    blurArea.classList.remove("blur");
   }
 
   function addModalCloseListener() {
@@ -101,6 +105,8 @@
       toggleModal();
     });
   }
+
+
 
 
   function addListeners() {
@@ -152,13 +158,13 @@
 
     feedbackWrapper.addEventListener("click", function (ev) {
       ev.preventDefault();
-      toggleModal();
+      closeModal();
     });
 
     window.addEventListener("keydown", function (ev) {
       if (ev.keyCode === 27) {
         if (!feedbackModal.classList.contains("hidden")) {
-          toggleModal();
+          closeModal();
         }
       }
     });
