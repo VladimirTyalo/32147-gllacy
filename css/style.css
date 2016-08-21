@@ -1342,6 +1342,7 @@ a:hover {
   border-radius: 15px;
   background: #ece0c7;
   background-image: url('./../img/bg-waffles.jpg');
+  background-position: left -20px top 0;
   flex: 1 1 100%;
   flex-wrap: wrap;
 }
@@ -1374,8 +1375,8 @@ a:hover {
 
 .seo__paragraph-icon {
   position: absolute;
-  top: -13px;
-  left: 0;
+  top: -1px;
+  left: -8px;
   width: 48px;
   height: 48px;
 }
